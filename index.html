@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile_media.css">
+	<script type="text/javascript" src='js/jquery-3.2.0.js'></script>
+</head>
+<body>
+	<header>
+			<img src="images/logo.png">
+			
+			<p class="phone_number">(096) 764-33-94<br>(093) 712-56-62</p>
+	</header>
+	<div class="menu_block">
+		<ul class="menu">
+				<li class="menu_item"><a href="#" class="menu_link">О КОМПАНИИ</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">ОТЗЫВЫ КЛИЕНТОВ</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">БЛОГ</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">КОНТАКТЫ</a></li>
+				<li class="menu_item"><a href="#" class="menu_link">ВСЕ УСЛУГИ &#9660;</a><ul class="submenu">
+							<li class="submenu_item"><a href="#" class="menu_link">Услуга 1</a></li>
+							<li class="submenu_item"><a href="#" class="menu_link">Услуга 2</a></li>
+							<li class="submenu_item"><a href="#" class="menu_link">Услуга 3</a></li>
+							<li class="submenu_item"><a href="#" class="menu_link">Услуга 4</a></li>
+					</ul>
+				</li>
+				<li class="menu_mobile"><span class="hamburger">МЕНЮ &#9776;</span>
+						<ul class="submenu_mobile">
+							<li class="submenu_item"><a href="#" class="menu_link">О КОМПАНИИ</a></li>
+							<li class="submenu_item"><a href="#" class="menu_link">ОТЗЫВЫ КЛИЕНТОВ</a></li>
+							<li class="submenu_item"><a href="#" class="menu_link">БЛОГ</a></li>
+							<li class="submenu_item"><a href="#" class="menu_link">КОНТАКТЫ</a></li>
+							<li class="submenu_item"><a href="#" class="menu_link uslygi">ВСЕ УСЛУГИ &#9660;</a>
+								<ul class="mobile_submenu">
+									<li class="submenu_item"><a href="#" class="menu_link">Услуга 1</a></li>
+									<li class="submenu_item"><a href="#" class="menu_link">Услуга 2</a></li>
+									<li class="submenu_item"><a href="#" class="menu_link">Услуга 3</a></li>
+									<li class="submenu_item"><a href="#" class="menu_link">Услуга 4</a></li>
+								</ul>
+							</li>
+						</ul>
+
+				</li>
+			</ul>
+	</div>
+	<div class="video">
+		<h1>Oslay-portal for calm people</h1>
+		<video width="100%"   autoplay="autoplay" loop="loop" muted="muted">
+   			<source src="video/ink.mp4" type='video/ogg; codecs="theora, vorbis"'>
+   		</video>
+	</div>
+	<article>
+		<h1> What we can tell about us?!</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium fugiat sit totam ullam placeat, ipsum consequatur velit provident eum quidem earum fuga libero quas sed minus! Minus, reprehenderit repellendus tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium fugiat sit totam ullam placeat, ipsum consequatur velit provident eum quidem earum fuga libero quas sed minus! Minus, reprehenderit repellendus tempore.</p>
+		<p class="flex"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad porro nulla ut repudiandae necessitatibus hic incidunt impedit odit est inventore, magnam rem fuga ipsum. Provident saepe perspiciatis cupiditate culpa illo.</span><img src="images/calm1.png"><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur a eligendi sint dicta, atque neque eaque sunt sit necessitatibus mollitia quaerat non ab quas dolore quo impedit id consectetur! Mollitia!</span></p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium fugiat sit totam ullam placeat, ipsum consequatur velit provident eum quidem earum fuga libero quas sed minus! Minus, reprehenderit repellendus tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium fugiat sit totam ullam placeat, ipsum consequatur velit provident eum quidem earum fuga libero quas sed minus! Minus, reprehenderit repellendus tempore.</p>
+	</article>
+</body>
+
+
+<script type="text/javascript">
+	$(function(){
+			$('.menu_item').hover(
+    			function() {$('ul', this).slideDown(110);},
+    			function() {$('ul', this).slideUp(50);});
+	});
+
+
+	var hamburger_count=0;
+
+	$('.hamburger').click(function(){
+		hamburger_count++;
+		if (hamburger_count%2!=0)
+		$('.submenu_mobile').css('display','block');
+		else
+		$('.submenu_mobile').css('display','none');
+	});
+
+	var uslygi_count=0;
+
+	$('.uslygi').click(function(){
+		uslygi_count++;
+		if (uslygi_count%2!=0)
+		$('.mobile_submenu').css('display','block');
+		else
+		$('.mobile_submenu').css('display','none');
+	});
+</script>
+
+
+</html>
+

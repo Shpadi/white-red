@@ -1,0 +1,14 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 700px)  {
+
+	.flex{
+		display: inline-block;
+	}
+
+	p>img{
+		width: 100%;
+		margin: 0px;
+		height: auto;
+		display: block
+	}
+
+}
